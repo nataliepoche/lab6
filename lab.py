@@ -8,14 +8,14 @@ def encode(number):
     number_list =number.split() # split password entered as a list
     for num in num_list:
         coded_pass += num*3 # encode numbers by multiplying by 3
-    coded = list.join(coded_pass) # return list to a string
+    coded = "".join(coded_pass) # return list to a string
     return coded
 
 def decode(number):
     number_list = number.split()
     for num in num_list:
         decoded_pass += num/3
-    decoded = list.join(decoded_pass)
+    decoded = "".join(decoded_pass)
     return decoded
 
 if __name__ == "__main__":
