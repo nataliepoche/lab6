@@ -4,10 +4,19 @@ def main():
     print("1. Encode \n2. Decode \n3. Quit")
 
 def encode(number):
-    pass
+    coded_pass = []
+    number_list =number.split() # split password entered as a list
+    for num in num_list:
+        coded_pass += num*3 # encode numbers by multiplying by 3
+    coded = list.join(coded_pass) # return list to a string
+    return coded
 
-def decode():
-    pass
+def decode(number):
+    number_list = number.split()
+    for num in num_list:
+        decoded_pass += num/3
+    decoded = list.join(decoded_pass)
+    return decoded
 
 if __name__ == "__main__":
     condition = True
@@ -19,6 +28,7 @@ if __name__ == "__main__":
             print("Your password has been encoded and stored!")
             print(number)
         elif choice == 2:
+            decode(coded)
             print(f"The encoded password is {new_number}, and the original password is {number}")
         elif choice == 3:
             condition = False
